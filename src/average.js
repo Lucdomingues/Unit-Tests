@@ -14,17 +14,15 @@
 const numbers = require('./numbers');
 
 const average = (arr) => {
-  // for (let i of arr) {
-  //   if (typeof i !== 'number') { return undefined; }
-  // } if (arr.length > 0) {
-  //   let media;
-  //   let soma = 0;
-  //   for (let index = 0; index < arr.length; index += 1) {
-  //     soma += arr[index];
-  //   }
-  //   let n = Math.round(media = soma / arr.length);
-  //   return n;
-  // }
+  let media;
+  let soma = 0;
+  if (arr.length === 0) { return undefined; }
+  for (let index = 0; index < arr.length; index += 1) {
+    if (typeof arr[index] !== 'number') { return undefined; }
+    soma += arr[index];
+  }
+  let n = Math.round(media = soma / arr.length);
+  return n;
 };
 
 module.exports = average;
