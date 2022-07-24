@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 /*
   A função createStudent recebe como parâmetro um nome, e retorna um objeto contendo duas chaves:
 
@@ -15,6 +16,12 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-const createStudent = () => {};
+const createStudent = (nome) => {
+  const feed = () => 'Eita pessoa boa!';
+  const obj = {
+    name: nome,
+    feedback: feed(),
+  };
+};
 
 module.exports = createStudent;
